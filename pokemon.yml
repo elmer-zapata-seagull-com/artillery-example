@@ -17,5 +17,5 @@ config:
 scenarios:
   - name: Test1
     flow:
-      - post:
+      - get:
           url: /v2/pokemon/onix
