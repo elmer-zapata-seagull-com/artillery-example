@@ -1,0 +1,42 @@
+name: Execution Performance Artillery
+
+on:
+  workflow_dispatch:
+    inputs:
+      testSuite:
+        type: string
+        description: 'testSuite'
+        required: true
+        default: 'pokemonapi.PokemonApiTest'
+      concurrent:
+        type: string
+        description: 'Quantity of users'
+        required: true
+        default: '10'
+
+jobs:
+  execpokemonapi:
+    runs-on: ubuntu-latest
+    name: Execution Performance Pokemon API
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Execute load tests
+        uses: artilleryio/action-cli@v1
+        with:
+          command: run --output pokemon-report.json pokemon.yml
+
+      - name: Generate report
+        uses: artilleryio/action-cli@v1
+        with:
+          command: report pokemon-report.json
+
+      - name: Save report
+        if: ${{always()}}
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: gatling report
+          path: ./pokemon-report.json.html
+
+
