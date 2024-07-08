@@ -25,7 +25,7 @@ jobs:
       - name: Execute load tests
         uses: artilleryio/action-cli@v1
         with:
-          command: run --output pokemon-report.json pokemon.yml
+          command: run --output pokemon-report.json -e production pokemon.yml
 
       - name: Generate report
         uses: artilleryio/action-cli@v1
