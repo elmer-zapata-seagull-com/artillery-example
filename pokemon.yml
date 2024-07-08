@@ -18,4 +18,4 @@ scenarios:
   - name: Test1
     flow:
       - get:
-          url: /v2/pokemon/onix
+          url: /api/v2/pokemon/onix
