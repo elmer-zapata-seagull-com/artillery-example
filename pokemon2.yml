@@ -1,5 +1,3 @@
-pokemon:
-  yml:
 config:
   target: 'https://pokeapi.co/v2/pokemon/onix'
   phases:
