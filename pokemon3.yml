@@ -1,0 +1,21 @@
+config:
+  target: 'https://pokeapi.co/v2/pokemon/onix'
+  phases:
+    - duration: 300
+      arrivalRate: 50
+  environments:
+    production:
+      target: 'https://pokeapi.co'
+      phases:
+        - duration: 20
+          arrivalRate: 10
+    local:
+      target: 'https://pokeapi.co'
+      phases:
+        - duration: 20
+          arrivalRate: 20
+scenarios:
+  - name: Test1
+    flow:
+      - get:
+          url: /api/v2/pokemon/onix
