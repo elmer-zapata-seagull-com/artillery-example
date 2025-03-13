@@ -12,7 +12,7 @@ config:
     local:
       target: 'https://pokeapi.co'
       phases:
-        - duration: 20
+        - duration: 21
           arrivalRate: 20
 scenarios:
   - name: Test1
