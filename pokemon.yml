@@ -4,7 +4,7 @@ config:
     - duration: 300
       arrivalRate: 50
   environments:
-    production:
+    production222:
       target: 'https://pokeapi.co'
       phases:
         - duration: 25
