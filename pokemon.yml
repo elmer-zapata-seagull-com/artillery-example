@@ -4,16 +4,16 @@ config:
     - duration: 300
       arrivalRate: 50
   environments:
-    production:
+    production222:
       target: 'https://pokeapi.co'
       phases:
-        - duration: 20
+        - duration: 25
           arrivalRate: 10
     local:
       target: 'https://pokeapi.co'
       phases:
-        - duration: 25
-          arrivalRate: 20
+        - duration: 22
+          arrivalRate: 30
 scenarios:
   - name: Test1
     flow:
