@@ -18,4 +18,4 @@ scenarios:
   - name: Test1
     flow:
       - get:
-          url: /api/v2/pokemon/onix-test-abel
+          url: /api/v2/pokemon/onix-test-abel-second-commit
