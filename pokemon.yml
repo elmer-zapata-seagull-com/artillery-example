@@ -7,7 +7,7 @@ config:
     production:
       target: 'https://pokeapi.co'
       phases:
-        - duration: 20
+        - duration: 25
           arrivalRate: 10
     local:
       target: 'https://pokeapi.co'
